@@ -46,6 +46,8 @@ policyengine.simple:
     mode: connector
 ```
 
+You'll need to have a JSON RPC Node connected to the Polygon testnet. You can either run a node yourself, connect to a free public node, or use a node running service provider. For a list of the JSON RPC methods required by FireFly, please see the [Evmconnect README](https://github.com/hyperledger/firefly-evmconnect#blockchain-node-compatibility)
+
 Use the following command line to create your stack and use the custom blockchain connector config file that we created:
 
 ```
@@ -53,12 +55,10 @@ ff init ethereum workshop 1 \
     --multiparty=false \
     --ipfs-mode public \
     --blockchain-node remote-rpc \
-    --remote-node-url https://e9e11d50-b48b-4152-a377-6d6d1961ea6b:YerYYZAqkzsNyEWVtb0QdSDme3YAyhnM@jsonrpc.polygon-mumbai.dev.labs.kaleido.cloud \
+    --remote-node-url <selected RPC endpoint> \
     --chain-id 80001 \
     --connector-config ~/evmconnect.yml
 ```
-
-> **NOTE**: This Remote RPC node URL contains a set of credentials that will only be usable during this workshop. If you want to run through this guide after the workshop has concluded you will need to use a different remote RPC node.
 
 Now you can start up your stack by running:
 
