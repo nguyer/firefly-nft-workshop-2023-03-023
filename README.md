@@ -335,7 +335,7 @@ You can also use FireFly's API to easily transfer any tokens owned by your node'
   "amount": "1",
   "from": "SENDER_ADDRESS",
   "to": "RECIPIENT_ADDRESS",
-  "tokenIndex": "1"
+  "tokenIndex": "0"
 }
 ```
 
